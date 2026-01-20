@@ -18,7 +18,7 @@ export default function Home() {
   useEffect(() => {
     const fetchNews = async () => {
       setLoading(true);
-      setAllNews([]);
+     
 
       try {
         const response =
@@ -31,6 +31,7 @@ export default function Home() {
         alert("something is wrong");
       } finally {
         setLoading(false);
+       
       }
     };
 
@@ -47,7 +48,7 @@ export default function Home() {
         <h1 className="text-lg lg:text-xl font-semibold uppercase mt-6 mb-12">
           Global Job Portal
         </h1>
-        <CountrySelector setCountry={setCountry} />
+        <CountrySelector country={country} setCountry={setCountry} />
       </header>
 
       <main>
